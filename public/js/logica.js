@@ -1,4 +1,4 @@
-var socket = io.connect('localhost:8080');
+var socket = io.connect('https://chatnodecc.onrender.com');
 var list = document.querySelector('#lista-users');
 var username = window.location.pathname.replace('/chat/', '');
 var clientes = [];
