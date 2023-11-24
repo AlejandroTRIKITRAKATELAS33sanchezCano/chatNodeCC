@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ondrop="return false" ondrag="return false" onpaste="return false" oncontextmenu="return false">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Chat Note JS</title>
+  </head>
+  <body>
+
+    <div id="contenedor_carga">
+      <div id="carga"></div>
+  </div>
+
+  <script>
+      window.onload = function(){
+          var contenedor = document.getElementById('contenedor_carga');
+
+          contenedor.style.visibility = 'hidden';
+          contenedor.style.opacity = '0';
+      }
+  </script>
+    <div class="main-container">
+      <div class="login-container">
+        <h2 style="width: 100%;">Chat NodeJS</h2>
+        <input type="text" class="input-login" placeholder="Nombre de usuario" id="username">
+        <button type="button" class="login-button" onclick="joinChat()">Ingresar</button>
+      </div>
+    </div>
+    <script>
+    function joinChat() {
+      var username = document.querySelector('#username').value;
+      if (username.length <= 0) {
+        alert('Ingrese Un Nombre Concha De Su Ma');
+      } else {
+        window.location = '/chat/' + username;
+      }
+    }
+    </script>
+  </body>
+</html>
